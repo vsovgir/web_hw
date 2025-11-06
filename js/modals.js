@@ -39,28 +39,34 @@ export function initModals() {
     'Пухля': 'Любимая свинка Мэйбл, талисман лавки.'
   };
 
-  document.querySelectorAll('.cards:last-of-type figure').forEach(fig => {
-    fig.addEventListener('click', () => {
-      const name = fig.querySelector('figcaption').textContent;
-      content.innerHTML = `
-        <h2>${name}</h2>
-        <p>${employees[name] || 'Нет данных о сотруднике.'}</p>
-      `;
-      content.appendChild(closeBtn);
-      modal.style.display = 'flex';
+
+  const employeeSection = [...document.querySelectorAll('.cards')]
+    .find(section => section.querySelector('.cards-header p')?.textContent.includes('Сотрудники'));
+
+  if (employeeSection) {
+    employeeSection.querySelectorAll('figure').forEach(fig => {
+      fig.addEventListener('click', () => {
+        const name = fig.querySelector('figcaption').textContent;
+        content.innerHTML = `
+          <h2>${name}</h2>
+          <p>${employees[name] || 'Нет данных о сотруднике.'}</p>
+        `;
+        content.appendChild(closeBtn);
+        modal.style.display = 'flex';
+      });
     });
-  });
+  }
 
   document.querySelectorAll('.cards-group button').forEach(btn => {
     btn.addEventListener('click', e => {
       e.stopPropagation();
       const productName = btn.previousElementSibling.textContent;
       content.innerHTML = `
-        <h2>Товар добавлен в корзину</h2>
-        <p>${productName} успешно добавлен!</p>
+        <p>Узнать про экспонат «${productName}» можно только за деньги, ха-ха!</p>
       `;
       content.appendChild(closeBtn);
       modal.style.display = 'flex';
     });
   });
 }
+

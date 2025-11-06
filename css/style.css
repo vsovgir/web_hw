@@ -257,18 +257,103 @@ figure:hover {
 }
 
 
-@media (max-width: 1024px){
-  :root{
-    --fs-hero: 48px;
-    --fs-stat: 80px;
+@media (max-width: 1024px) {
+
+  .intro-title {
+    font-size: 48px;
+    line-height: 1.1;
   }
-  .stats-grid{ grid-template-columns: 1fr; }
+
+  .head-group {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .stats-left {
+    font-size: 20px;
+  }
+
+  .stat-value {
+    font-size: 60px;
+  }
+
+  .cards-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  figure img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .feedback h2 {
+    font-size: 24px;
+  }
+
+  #feedback-input {
+    width: 80%;
+  }
 }
 
-@media (max-width: 640px){
-  :root{
-    --fs-hero: 32px;
-    --fs-stat: 56px;
+@media (max-width: 640px) {
+
+  .intro-title {
+    font-size: 32px;
+    line-height: 1.2;
   }
-  .logo-left, .logo-right{ width: 96px; height: 96px; }
+
+  .head-group {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .stat-value {
+    font-size: 40px;
+  }
+
+  .stats-left {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .cards-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  figure img {
+    width: 100px;
+    height: 100px;
+  }
+
+  figure figcaption {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+
+  .feedback {
+    padding: 20px 10px;
+  }
+
+  #feedback-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #feedback-form button {
+    width: 100%;
+  }
 }

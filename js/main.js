@@ -1,4 +1,4 @@
-import { initScroll } from './scroll.js';
+import { initScroll } from './scrolls.js';
 import { initModals } from './modals.js';
 import { initFeedback } from './feedback.js';
 
