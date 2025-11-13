@@ -1,0 +1,58 @@
+
+.head{
+  width: 100%;
+  padding-top: 15px;
+}
+
+.headContainer{
+  padding-top: 50px;
+  padding-bottom: 10px;
+  gap: 20px;   
+}
+
+.group{ 
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: 8px; 
+}
+
+.logoCol{ 
+  height: 149.87px;
+  object-fit: contain;
+}
+
+.content{
+  display: flex;             
+  flex-direction: column;     
+  align-items: left;        
+  gap: 20px; 
+}
+
+
+@media (max-width: 1024px) {
+  .logoCol {
+    height: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logoCol {
+    height: 90px;
+  }
+}
+
+@media (max-width: 640px) {
+  .logoCol {
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoCol {
+    height: 55px;
+  }
+}
+
+
+

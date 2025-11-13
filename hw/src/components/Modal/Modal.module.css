@@ -1,0 +1,72 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.closeIcon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #444;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px;
+  transition: 0.2s;
+  line-height: 1;
+  z-index: 10;
+}
+
+.closeIcon:hover {
+  color: #000;
+  transform: scale(1.15);
+}
+
+.modalTitle {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.modalText {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.payButton {
+  background-color: var(--button-bg);
+  color: var(--ink);
+  border: 2px solid #5a4c4c;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.payButton:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+}
