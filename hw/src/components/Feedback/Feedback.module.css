@@ -1,0 +1,101 @@
+.feedback {
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  width: 100%;
+}
+
+.input {
+  padding: 10px 14px;
+  width: 75%;
+  max-width: 900px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+  resize: none;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.send {
+  background-color: var(--button-bg);
+  border: 1px solid #5a4c4c;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.send:hover {
+  background-color: var(--button-hover);
+}
+
+.list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%; /* чтобы p знал свою ширину */
+}
+
+.item p {
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+
+.delete {
+  background: none;
+  border: none;
+  color: #444;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px;
+  transition: 0.2s;
+  line-height: 1;
+}
+
+.delete:hover {
+  color: #000;
+  transform: scale(1.15);
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .input {
+    width: 80%;
+  }
+}
+
+@media (max-width: 640px) {
+  .feedback {
+    padding: 20px 10px;
+  }
+
+  .input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .submitButton {
+    width: auto;
+  }
+}
+
