@@ -34,7 +34,8 @@ export function initFeedback() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const text = input.value.trim();
+    const formData = new FormData(form);
+    const text = formData.get("feedback-input");
 
     if (text) {
       const newFeedback = {

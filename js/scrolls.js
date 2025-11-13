@@ -1,14 +1,16 @@
 export function initScroll() {
   const buttons = {
-    facts: document.querySelector('.button-one'),
-    products: document.querySelector('.button-two'),
-    employees: document.querySelector('.button-three')
+    facts: document.querySelector('.button-facts'),
+    products: document.querySelector('.button-exhibits'),
+    employees: document.querySelector('.button-employees'),
+    reviews: document.querySelector('.button-reviews')
   };
 
   const sections = {
     facts: document.querySelector('.stats'),
     products: document.querySelectorAll('.cards')[0],
-    employees: document.querySelectorAll('.cards')[1]
+    employees: document.querySelectorAll('.cards')[1],
+    reviews: document.querySelector('.feedback')
   };
 
   buttons.facts.addEventListener('click', () => {
@@ -19,5 +21,8 @@ export function initScroll() {
   });
   buttons.employees.addEventListener('click', () => {
     sections.employees.scrollIntoView({ behavior: 'smooth' });
+  });
+  buttons.reviews.addEventListener('click', () => {
+    sections.reviews.scrollIntoView({ behavior: 'smooth' });
   });
 }
