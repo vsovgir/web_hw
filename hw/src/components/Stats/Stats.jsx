@@ -1,6 +1,6 @@
 import styles from './Stats.module.css';
 
-export default function Stats() {
+export default function Stats({ onMoreFacts, hideIntro = false, compact = false }) {
   const data = [
     {
       value: '1982',
@@ -31,27 +31,39 @@ export default function Stats() {
 
   return (
     <section className={styles.stats}>
-      <aside className={styles.statsLeft}>
-        <p>
-          Если вы когда-нибудь будете на северо-западном побережье, вы, вероятно, увидите на
-          машинах наклейки с названием «Гравити Фолз». Этого городка нет на картах, и мало кто
-          о нем слышал, кто-то считает, что это миф. Но если вам любопытно, не ждите, поезжайте
-          туда, найдите его! Он где-то там, среди лесов, ждет вас…
-        </p>
-      </aside>
+      {!hideIntro && (
+        <aside className={styles.statsLeft}>
+          <p>
+            Если вы когда-нибудь будете на северо-западном побережье, вы, вероятно, увидите на
+            машинах наклейки с названием «Гравити Фолз». Этого городка нет на картах, и мало кто
+            о нем слышал, кто-то считает, что это миф. Но если вам любопытно, не ждите, поезжайте
+            туда, найдите его! Он где-то там, среди лесов, ждет вас…
+          </p>
+        </aside>
+      )}
 
       <div className={styles.statsRight}>
         {data.map((item, index) => (
           <article key={index} className={styles.statRow}>
-            <div className={styles.statValue}>{item.value}</div>
-            <p className={styles.statCaption}>{item.caption}</p>
+            <div className={compact ? styles.statValueSmall : styles.statValue}>
+              {item.value}
+            </div>
+            <p className={compact ? styles.statCaptionSmall : styles.statCaption}>
+              {item.caption}
+            </p>
             {index < data.length - 1 && <hr className="rule" />}
           </article>
         ))}
-        <button className={styles.button}>Ещё факты</button>
+
+        {onMoreFacts && (
+          <button className={styles.button} type="button" onClick={onMoreFacts}>
+            Узнать больше о лавке
+          </button>
+        )}
       </div>
     </section>
   );
 }
+
 
 
