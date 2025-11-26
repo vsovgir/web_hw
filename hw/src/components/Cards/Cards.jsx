@@ -1,21 +1,14 @@
 import styles from './Cards.module.css';
 import { exhibitsInfo, employeesInfo } from '../data/modalsData.js';
 
-
-export default function Cards({ title, type, onOpenModal }) {
+export default function Cards({ title, type, onOpenModal, onMoreExhibits }) {
   const exhibits = [
     { name: 'Камень, похожий на лицо', img: 'https://i.pinimg.com/736x/5a/b1/e4/5ab1e42369b619569d41b643382c0beb.jpg' },
     { name: 'Снежный человек', img: 'https://i.pinimg.com/736x/03/ec/63/03ec63c177e5d7394b15df2c66f73e3c.jpg' },
     { name: 'Гризлирог', img: 'https://i.pinimg.com/1200x/38/31/8e/38318e2f1a0d6199d8e13cc4be57ec5b.jpg' },
     { name: 'Летающие тарелки', img: 'https://i.pinimg.com/originals/79/ac/f8/79acf8d3edaf02a7e25cb167564e8c19.jpg' },
     { name: 'Птица Додо', img: 'https://i.pinimg.com/originals/b5/d7/1e/b5d71e41813fe571341cc8bf4b1e3f2c.jpg' },
-    { name: 'Джеколоп', img: 'https://i.pinimg.com/originals/5f/bb/4d/5fbb4d31812b0638d090fb2edbe99039.jpg' },
-    { name: 'Бобророг', img: 'https://i.pinimg.com/originals/35/ba/04/35ba0429bbf9dcc2b91ff437c2d9222d.jpg' },
-    { name: 'Птерозавр', img: 'https://i.pinimg.com/originals/41/6f/66/416f66157fb1e2b19445973c7f6848ea.jpg' },
-    { name: 'Качок-лопа', img: 'https://i.pinimg.com/originals/e4/d0/a1/e4d0a1f757758d8975e6dd71436db89e.jpg' },
-    { name: 'Грифон', img: 'https://i.pinimg.com/736x/b1/c1/50/b1c1501402ecdc434ec626eaf9c1818e.jpg' },
-    { name: 'Календарь ацтеков', img: 'https://i.pinimg.com/736x/4c/78/c6/4c78c65d8aeac4c94bc665e4514b5620.jpg' },
-    { name: 'Тсантса', img: 'https://i.pinimg.com/736x/ea/c9/94/eac9948acce471a83d29a5a0aa07d73e.jpg' },
+    { name: 'Джеколоп', img: 'https://i.pinimg.com/originals/5f/bb/4d/5fbb4d31812b0638d090fb2edbe99039.jpg' }
   ];
 
   const employees = [
@@ -56,8 +49,14 @@ export default function Cards({ title, type, onOpenModal }) {
         ))}
       </div>
 
-      {type === 'exhibits' && (
-        <button className={styles.button}>Ещё экспонаты</button>
+      {type === 'exhibits' && onMoreExhibits && (
+        <button
+          className={styles.button}
+          type="button"
+          onClick={onMoreExhibits}
+        >
+          Ещё экспонаты
+        </button>
       )}
     </section>
   );
