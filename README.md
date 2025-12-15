@@ -1,0 +1,1 @@
+Ссылка на прототип в Figma -- https://www.figma.com/design/NBnWte2DakZKd8iO0jybxX/web?node-id=0-1&t=X0NiXZ60A1oknJmX-1

@@ -1,0 +1,159 @@
+:root{
+  --bg: #fff;
+  --ink: #0b0b0b;
+  --muted: #6b7280;
+  --rule: #0b0b0b;
+}
+
+*{ 
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img{ 
+  max-width: 100%; 
+  display: block; 
+}
+
+.rule {
+  border: none;
+  height: 1px;
+  background: var(--rule);
+  width: 100%;
+  margin: 0;  
+}
+
+
+.navsection{
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px; 
+}
+
+.navcontain{
+  padding-top: 50px;
+  padding-bottom: 10px;
+  gap: 20px;   
+}
+
+.logo-group{ 
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+}
+
+.logo-left,
+.logo-right{
+  width: 149.87px; 
+  height: 149.87px;
+  object-fit: contain;
+}
+
+.content{
+  gap: 20px;
+}
+
+.intro{
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  gap:150px; 
+}
+
+.intro-title{
+  font-size: 64px;
+  letter-spacing: -5%;
+  line-height: 100%;
+  text-align: left;
+  font-weight: 400;
+  padding-bottom: 150px;
+  padding-top: 10px;
+  gap: 10px;
+}
+
+.stats{ 
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 50px;
+  gap:30px;   
+}
+
+.stats-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+}
+
+
+.stats-left{
+  font-size: 30px;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: -2%;
+  line-height: 100%;
+  gap: 10px;
+}
+
+.stats-right{
+  gap: 73px;
+}
+
+.stats-section{
+  gap: 20px;  
+}
+
+.stat-row{
+  gap: 17px;
+}
+
+.stat-value{
+  font-size: 105px;
+  font-weight: 400;
+  letter-spacing: -5%;
+  line-height: 110%;
+  text-align: left;
+}
+.stat-caption{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -3%;
+  text-align: left;
+}
+
+.cta{
+  gap:34px;
+  font-size: 37px;
+  font-weight: 400;
+  letter-spacing: -3%;
+  text-align: center;
+}
+
+@media (max-width: 1024px){
+  :root{
+    --fs-hero: 48px;
+    --fs-stat: 80px;
+  }
+  .stats-grid{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px){
+  :root{
+    --fs-hero: 32px;
+    --fs-stat: 56px;
+  }
+  .logo-left, .logo-right{ width: 96px; height: 96px; }
+}
