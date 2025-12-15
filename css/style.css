@@ -14,6 +14,9 @@ html, body {
 }
 
 body{
+  padding-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0;
   background: var(--bg);
   color: var(--ink);
@@ -27,6 +30,29 @@ img{
   display: block; 
 }
 
+button{
+  background-color: #f4b6c2;
+  color: #0b0b0b;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 28px;
+  border: 1px solid #5a4c4c; 
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #f7c7d2;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
 .rule {
   border: none;
   height: 1px;
@@ -34,93 +60,87 @@ img{
   width: 100%;
   margin: 0;  
 }
-
-
-.navsection{
+.head{
   width: 100%;
   padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px; 
 }
 
-.navcontain{
+.head-container{
   padding-top: 50px;
   padding-bottom: 10px;
   gap: 20px;   
 }
 
-.logo-group{ 
-  display: flex; 
-  align-items: center; 
+.head-group{ 
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
   gap: 8px; 
 }
 
-.logo-left,
-.logo-right{
-  width: 149.87px; 
+.logo-col{ 
   height: 149.87px;
   object-fit: contain;
 }
 
 .content{
-  gap: 20px;
+  display: flex;             
+  flex-direction: column;     
+  align-items: left;        
+  gap: 20px; 
 }
 
 .intro{
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  gap:150px; 
+  padding-bottom: 10px;
+  padding-top: 10px;
+  display: flex;             
+  flex-direction: column;     
+  align-items: center;        
+  gap: 20px; 
 }
 
 .intro-title{
-  font-size: 64px;
+  font-size: 80px;
   letter-spacing: -5%;
   line-height: 100%;
-  text-align: left;
-  font-weight: 400;
-  padding-bottom: 150px;
-  padding-top: 10px;
+  text-align: center;
+  font-weight: 500;
   gap: 10px;
 }
 
 .stats{ 
   padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 50px;
-  gap:30px;   
-}
-
-.stats-grid{
+  padding-bottom: 15px;
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;             
+  flex-direction: row;       
+  gap: 70px;   
 }
-
 
 .stats-left{
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 400;
   text-align: left;
   letter-spacing: -2%;
   line-height: 100%;
-  gap: 10px;
 }
 
-.stats-right{
-  gap: 73px;
-}
-
-.stats-section{
-  gap: 20px;  
+.stats-right{ 
+  display: flex;             
+  flex-direction: column;     
+  align-items: left;        
+  gap: 25px; 
 }
 
 .stat-row{
-  gap: 17px;
+  display: flex;             
+  flex-direction: column;     
+  align-items: left;        
+  gap: 3px;
 }
 
 .stat-value{
-  font-size: 105px;
+  font-size: 80px;
   font-weight: 400;
   letter-spacing: -5%;
   line-height: 110%;
@@ -134,26 +154,206 @@ img{
   text-align: left;
 }
 
-.cta{
-  gap:34px;
-  font-size: 37px;
-  font-weight: 400;
-  letter-spacing: -3%;
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  margin: 0;
+}
+
+figure img {
+  height: 149.87px;
+  width: 149.87px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+figure figcaption {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+figure:hover {
+  transform: translateY(-2px);
+}
+
+.cards{
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 20px; 
+}
+
+.cards-header{
+  font-size: 25px;
+  letter-spacing: -5%;
+  line-height: 100%;
+  text-align: center;
+  font-weight: 500;
+  gap: 10px;  
+}
+
+.cards-group {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.feedback {
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.feedback h2 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#feedback-form {
+  margin-top: 10px;
+}
+
+#feedback-input {
+  padding: 10px;
+  width: 60%;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+}
+
+#feedback-form button {
+  margin-left: 10px;
+  background-color: #f4b6c2;
+  font-weight: 600;
+  border: 1px solid #5a4c4c;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#feedback-form button:hover {
+  background-color: #f7c7d2;
+}
+
+#feedback-list {
+  margin-top: 30px;
   text-align: center;
 }
 
-@media (max-width: 1024px){
-  :root{
-    --fs-hero: 48px;
-    --fs-stat: 80px;
-  }
-  .stats-grid{ grid-template-columns: 1fr; }
+#feedback-list p {
+  margin: 10px 0;
+  font-size: 18px;
 }
 
-@media (max-width: 640px){
-  :root{
-    --fs-hero: 32px;
-    --fs-stat: 56px;
+
+@media (max-width: 1024px) {
+
+  .intro-title {
+    font-size: 48px;
+    line-height: 1.1;
   }
-  .logo-left, .logo-right{ width: 96px; height: 96px; }
+
+  .head-group {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .stats-left {
+    font-size: 20px;
+  }
+
+  .stat-value {
+    font-size: 60px;
+  }
+
+  .cards-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  figure img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .feedback h2 {
+    font-size: 24px;
+  }
+
+  #feedback-input {
+    width: 80%;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .intro-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .head-group {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .stat-value {
+    font-size: 40px;
+  }
+
+  .stats-left {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .cards-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  figure img {
+    width: 100px;
+    height: 100px;
+  }
+
+  figure figcaption {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+
+  .feedback {
+    padding: 20px 10px;
+  }
+
+  #feedback-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #feedback-form button {
+    width: 100%;
+  }
 }
